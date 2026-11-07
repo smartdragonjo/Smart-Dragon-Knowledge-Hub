@@ -85,3 +85,13 @@ h2 { font-size: 1.2rem; }
 .topbar-inner>.brand{display:block;text-align:center;margin:0 auto;max-width:calc(100% - 180px)}
 .topbar-inner>.admin-link{position:absolute;inset-inline-end:clamp(1rem,2vw,2rem);top:50%;transform:translateY(-50%);margin:0}
 @media(max-width:560px){.topbar-inner>.brand{font-size:1.05rem;max-width:calc(100% - 165px)}}
+
+
+/* Service-only menu: limited height with discreet scrolling when the directory grows. */
+.topbar-inner>.menu .menu-panel{max-height:min(70dvh,560px);overflow:hidden;display:flex;flex-direction:column;padding:1rem .55rem .65rem 1rem}
+.topbar-inner>.menu .menu-panel>strong{flex:0 0 auto;padding:.15rem .3rem .6rem;border-bottom:1px solid #e2ece5;margin:0 .3rem}
+.topbar-inner>.menu .menu-items{overflow-y:auto;min-height:0;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#91b5a4 transparent;display:flex;flex-direction:column;gap:.2rem;padding:.4rem .3rem .4rem .2rem}
+.topbar-inner>.menu .menu-items::-webkit-scrollbar{width:7px}
+.topbar-inner>.menu .menu-items::-webkit-scrollbar-thumb{background:#91b5a4;border-radius:10px;border:1px solid white}
+.topbar-inner>.menu .menu-items a{overflow-wrap:anywhere;line-height:1.75;padding:.7rem .75rem;border-radius:.65rem}
+@media(max-width:560px){.topbar-inner>.menu .menu-panel{max-height:min(70dvh,530px)}}
