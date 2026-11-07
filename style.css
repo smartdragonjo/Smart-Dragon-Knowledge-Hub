@@ -1,0 +1,63 @@
+@font-face {
+    font-family: Cairo;
+    src: url(cairo-latin-wght-normal.woff2) format("woff2");
+    font-weight: 200 1000;
+    font-display: swap;
+}
+@font-face {
+    font-family: Cairo;
+    src: url(cairo-arabic-wght-normal.woff2) format("woff2");
+    font-weight: 200 1000;
+    font-display: swap;
+    unicode-range: U+0600-06FF, U+0750-077F, U+0870-089F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF;
+}
+:root {
+    font: 16px/1.85 Cairo, sans-serif;
+    color: #182822;
+    background: #f5f7f5;
+    --green: #145746;
+    --line: #dbe5df;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: .85rem max(1rem, calc((100% - 920px) / 2));
+    background: #152b24;
+    color: #fff;
+}
+header a { color: inherit; }
+.brand { font-weight: 850; text-decoration: none; }
+main { max-width: 950px; margin: auto; padding: clamp(1rem, 4vw, 2rem); }
+a { color: var(--green); text-underline-offset: .2em; }
+:focus-visible { outline: 3px solid #34836a; outline-offset: 4px; }
+h1, h2, h3 { line-height: 1.45; }
+h1 { font-size: clamp(1.65rem, 4vw, 2.55rem); margin-block: .35rem 1rem; }
+h2 { font-size: 1.2rem; }
+.intro, .panel {
+    border: 1px solid var(--line);
+    border-radius: 1rem;
+    padding: clamp(1rem, 4vw, 2rem);
+    margin-block-end: 1.5rem;
+}
+.intro { background: #e8f2eb; }
+.panel { background: #fff; }
+.eyebrow, .breadcrumb { color: #426558; font-weight: 750; font-size: .88rem; }
+.cards { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: .8rem; }
+.cards a {
+    display: block;
+    height: 100%;
+    padding: .85rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: .8rem;
+    background: #fff;
+    text-decoration: none;
+}
+.cards a:hover { border-color: #4e8473; }
+.cards span { display: block; color: #52645b; }
+.prose { overflow-wrap: anywhere; }
+.prose code { background: #eef2ef; padding: .15rem .3rem; border-radius: .25rem; }
+.prose pre { white-space: pre-wrap; }
